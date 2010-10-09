@@ -8,6 +8,8 @@ This app provides a upload interface to store and serve files and was initially 
 It's kind of a *poor man's CDN* solution. You can set a custom domain for the app (like *static.mydomain.com*), upload files, get serving URL's in return and use them in your webpage
 (extremely useful if you want to use images etc. in an environment where you can alter the template files but can't upload any additional files).
 
+Maximum size for a single uploaded file - 2GB
+
 Installation
 ----
 
