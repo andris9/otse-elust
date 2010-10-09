@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+
+{% block bodycontents %}
+        <ul class="navigation"> 
+            <li><a href="/manage/upload">Lae uus fail üles</a></li> 
+            <li><a href="/logout">Logi välja</a></li> 
+        </ul> 
+
+<h2>Lae fail üles</h2>
+
+<form action="{{upload_url}}" method="POST" enctype="multipart/form-data">
+    <p>Vali fail: <input type="file" name="file"><br> <input type="submit" name="submit" value="Lae üles"></p>
+</form>
+
+<p><a href="/manage/">Tagasi</a></p>
+
+{% endblock %}
+

@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+
+{% block bodycontents %}
+        <ul class="navigation"> 
+            <li><a href="/manage/upload">Lae uus fail üles</a></li>
+            <li><a href="/logout">Logi välja</a></li> 
+        </ul> 
+
+<h2>Fail on üles laetud!</h2>
+
+<p>Faili URL<br />
+    <a href="/serve/{{blob.key}}/{{blob.filename|urlencode}}">{{blob.filename|urlencode}}</a>
+</p>
+
+<p><a href="/manage/">Tagasi</a></p>
+
+{% endblock %}

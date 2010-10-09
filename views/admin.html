@@ -1,0 +1,42 @@
+{% extends "main.html" %}
+
+{% block bodycontents %}
+        <ul class="navigation"> 
+            <li><a href="/manage/upload">Lae uus fail üles</a></li> 
+            <li><a href="/logout">Logi välja</a></li> 
+        </ul> 
+
+{% if removed %}
+    <h2>Fail on kustutatud!</h2>
+{% endif %}
+
+<h2>Üleslaetud failid</h2>
+
+{% if blobs %}
+
+    <table>
+        <tr>
+            <th>Faili nimi</th>
+            <th>Suurus</th>
+            <th>Lisamise aeg</th>
+            <th>Kustuta</th>
+        </tr>
+        
+        {% for blob in blobs %}
+            <tr>
+                <td><a href="/serve/{{blob.key}}/{{blob.filename|urlencode}}">{{blob.filename|urlencode}}</a></td>
+                <td>{{blob.size|filesizeformat}}</td>
+                <td>{{blob.creation|date:"r"}}</td>
+                <td><a href="/manage/remove/{{blob.key}}" onclick="return confirm('Oled kindel?')">Kustuta</a></td>
+            </tr>
+        {% endfor %}
+    
+    </table>
+
+{% else %}
+
+<p>Mitte midagi pole veel üles laetud!</p>
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block headertitle %}otseelust.com failihoidla{% endblock %}</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <link href="/media/style.css?2" type="text/css" rel="stylesheet"/> 
+    </head>
+    <body>
+        <h1>{% block bodytitle %}<a href="http://www.otseelust.com">otseelust.com</a> failihoidla{% endblock %}</h1>
+        
+        <div>
+            {% block bodycontents %}
+                <p>Selles domeenis asuvad <a href="http://www.otseelust.com">otseelust.com</a> failid.</p>
+                <p>Failide haldamiseks <a href="/manage/">logi sisse</a></p>
+            {% endblock %}
+        </div>
+        
+    </body>
+</html>
