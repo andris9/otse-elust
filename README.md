@@ -5,6 +5,8 @@ OTSE-ELUST
 
 This app provides a upload interface to store and serve files and was initially developed for [otseelust.com](http://www.otseelust.com).
 
+It's kind of a *poor man's CDN* solution. You can set a custom domain for the app (like *static.mydomain.com*), upload files, get serving URL's in return and use them in your webpage.
+
 NB
 ----
 
